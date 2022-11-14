@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+:root {
+    /* project Colors */
+    --link-c: #474d75;
+    --dark-blue: #3a50f9;
+    --blue-sky: #3fb7fe;
+    --green: #3dd2ae;
+    /*old colors*/
+    --main-color: #333;
+    --yellow: #ffa731;
+    --orange: #f15e0e;
+    --pink: #ee4dc6;
+    --soft-pink: #e1b7bf;
+    --dark-pink: #c262af;
+    --grey: #d4c7e8;
+    --red: #bf404c;
+    --soft-red:#ef5a60;
+    --violet: #6e00fd;
+    --black: #111;
+    --text-c: #555c66;
+    --bg-footer: #333;
+    --light-text: #808080;
+    --main-bg: #f5f7fa;/* icon bg */
+    --shadow: rgb(0 0 0 / 20%);
+    --input-border: #d9d9d9;
+    --link-bg: #b9c1cc;
+    --dark-grayish: #414c62;
+    --olive: #c4b35d;
+    --grey-80: #808080;
+}
+/* global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+}
+@media (min-width: 922px) {
+    .container {
+        margin-left: 100px !important;
+        margin-right: 100px !important;
+    }
+}
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+/* start header */
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    height: 74px;
+}
+header form input {
+    border: 1px solid white;
+}
+header .search input::placeholder {
+    color: var(--input-border);
+}
+header .search i {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+@media (max-width: 767px) {
+    header nav {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-footer);
+        padding: 30px;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li {
+        flex-basis: 100%;
+    }
+    header nav ul li a {
+        color: white !important;
+    }
+    header nav .close {
+        display: block !important;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+header nav ul li a {
+    color: var(--footer-bg);
+}
+header nav ul li a:hover {
+    color: var(--light-text);
+}
+header nav .close {
+    color: white;
+    display: none;
+}
+@media (max-width: 767px) {
+    header .open {
+        display: block !important;
+    }
+}
+header .open {
+    display: none;
+}
+/* end header */
+
+/* start landing*/
+.landing::before {
+    content: "";
+    width: 30%;
+    height: 70%;
+    background-color: var(--orange);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+@media (min-width: 922px) {
+    .landing .container .info {
+        left: -50px;
+    }
+}
+@media (min-width: 768px) {
+    .landing .container .info {
+        max-width: 600px;
+        top: -150px;
+    }
+}
+@media (max-width: 767px) {
+    .landing .container .info h1 {
+        font-size: 40px !important;
+    }
+}
+/* end landing *
+
+/* about-company */
+@media (min-width: 768px) {
+    .about-company .container .services {
+        width: 40%;
+    }
+    .about-company .container .more-info {
+        width: calc(60% - 30px);
+    }
+}
+.about-company .container .more-info a:hover {
+    background-color: white;
+    color: var(--orange);
+}
+/* about-company */
+
+/* our-focus */
+.our-focus::before {
+    content: "";
+    width: 180px;
+    height: 100%;
+    background-color: var(--orange);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@media (min-width: 768px) {
+    .our-focus .container > div {
+        width: calc(50% - 15px)
+    }
+    .our-focus .container .info .bull {
+        margin-left: auto !important;
+        margin-right: unset !important;
+    }
+}
+.our-focus .container .info a:hover {
+    background-color: var(--orange);
+    color: white;
+}
+/* our-focus */
+
+/* about-work */
+.about-work .container p {
+    max-width: 700px;
+}
+.about-work .container a:hover {
+    background-color: white;
+    color: var(--orange);
+}
+.about-work .container .bull{
+    left: 50px;
+}
+/* about-work */
+
+/* competitive-edge */
+.competitive-edge .container::before {
+    content: "";
+    height: 100%;
+    width: 90%;
+    background-color: var(--orange);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.competitive-edge .container .image img {
+    max-width: 100%;
+}
+@media (min-width: 768px) {
+    .competitive-edge .container .info {
+        margin-left: auto;
+        top: -100px;
+    }
+}
+.competitive-edge .container .info {
+    max-width: 500px;
+}
+.competitive-edge .container .info a:hover {
+    background-color: var(--orange);
+    color: white;
+}
+/* competitive-edge */
+
+/* album */
+.album .container img {
+    max-width: 100%;
+}
+/* album */
+
+/* legacy */
+.legacy .container {
+    max-width: 700px;
+}
+.legacy .container a:hover {
+    background-color: white;
+    color: var(--orange);
+}
+/* legacy */
+
+/* form-controls */
+@media (min-width: 768px) {
+    .contact .container > div {
+        width: calc(50% - 15px);
+    }
+}
+.contact .container .social-media .social a:hover {
+    background-color: white;
+}
+.contact .container .social-media .social a:hover i {
+    color: var(--orange);
+}
+.contact .container .form-controls .check {
+    appearance: none;
+}
+.contact .container .form-controls .check + label::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 2px solid var(--orange);
+    transition: .3s;
+    position: absolute;
+    left: -20px;
+    top: -3px;
+}
+.contact .container .form-controls .check:checked + label::before {
+    background-color: var(--orange);
+}
+.contact .container .form-controls .check + label::after {
+    content: "\f00c";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    left: -15px;
+    top: 0px;
+    color: white;
+}
+.contact .container .form-controls .submit:hover {
+    background-color: white;
+    color: var(--orange);
+}
+/* form-controls */
+
+/* start footer */
+footer .text {
+    max-width: 500px;
+}
+footer .social-media a:hover i {
+    color: var(--orange);
+}
+footer a:hover {
+    color: var(--dark-grayish);
+    text-decoration: underline;
+}
+/* end footer */
